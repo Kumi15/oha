@@ -1,0 +1,60 @@
+@use "mixin" as m;
+@use "base" as b;
+
+.inner {
+    padding: 0 15px;
+  
+    @include m.mq(pc) {
+      padding: 0 30px;
+      max-width: calc(b.$width-inner + 30px * 2);
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+.heading {
+  text-align: center;
+  font-family: b.$font-family-en;
+}
+
+.heading__en {
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 3.8px;
+
+  @include m.mq(pc) {
+    font-size: 50px;
+    letter-spacing: 5px;
+  }
+}
+
+.heading__ja {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 1.12px;
+  margin-top: 14px;
+
+  @include m.mq(pc) {
+    font-size: 16px;
+    letter-spacing: 1.28px;
+  }
+}
+
+.hidden-sp {
+  @include m.mq(sp) {
+    display: none;
+  }
+}
+
+.hidden-pc {
+  @include m.mq(pc) {
+    display: none;
+  }
+}
+
+.inline-block{
+  font-weight: inherit;
+  display: inline-block;
+}

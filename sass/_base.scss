@@ -1,0 +1,60 @@
+$font-family-ja: "Noto Sans JP", serif;
+$font-family-en: "Montserrat", sans-serif;
+
+$font-size-base: 16px;
+$line-height-base: 1.7;
+
+$color-base: #111;
+$back-ground-base: #fafafa;
+$color-key1: #f5810e;
+$color-key2: #fabe00;
+$color-gradation: linear-gradient(180deg, #f8b819 0%, #f0d320 100%);
+
+$width-inner: 1140px;
+
+//スムーススクロール
+//html{
+//  scroll-behavior: smooth; // auto or smooth
+//}
+
+body {
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $color-base;
+  font-family: $font-family-ja;
+  background: $back-ground-base;
+}
+
+.button {
+  font-weight: 700;
+  letter-spacing: 0.48px;
+  display: inline-block;
+  padding: calc(10px - 2px) calc(30px - 2px);
+  //paddingの中にボーダーが入っているので引いています
+  border-radius: 60px;
+  border: 2px solid currentColor;
+  background: #fff;
+  font-size: 16px;
+  line-height: 1.7;
+  color: $color-base;
+  min-width: 150px;
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s;
+  //type2でcolor指定してるのでcolorも変わるように指定する
+
+  &:hover{
+    background-color: #FABE00;
+  }
+
+
+  &--type2 {
+    background-color: #111;
+    color: #fff;
+
+    &:hover{
+      background-color: #fff;
+      color: #111;
+    }
+  }
+}
+

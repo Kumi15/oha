@@ -1,0 +1,12 @@
+$breakpoints:(
+    sp:" not screen and (max-width: 767px)",
+    pc:"screen and (min-width: 768px)"
+);
+
+ @use "sass:map";
+    @mixin mq($breakpoint: pc) {
+      @media #{map.get($breakpoints, $breakpoint)} {
+        @content;
+      }
+    }
+
